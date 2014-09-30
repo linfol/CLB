@@ -23,7 +23,7 @@ static long myDoRand(unsigned long *seed)  //真正的随机数产生函数
 	q = *seed / C;    //取得商
 	r = *seed % C;    //取得余数
 	temp = A*r - B*(q-1);    //运用修改后的公式
-	if(temp < 0) temp += C;
+	if(temp < 0) temp += M;
 	return *seed = ( temp % M );  
 }
 
